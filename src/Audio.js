@@ -8,7 +8,7 @@ function Audio(callback) {
 	this.player = new SoundPlayer(callback);
 	
 	if(/iP(ad|od|hone)|Linux mips/i.test(navigator.userAgent)) {// todo: temporary mips
-		console.log("Audio disabled for iOS devices, see http://tinyurl.com/3sj2mtz");
+		console.log("Audio disabled for iOS devices, see https://tinyurl.com/3sj2mtz");
 		this.disable(callback);
 
 		return;
@@ -248,10 +248,10 @@ SoundPlayer.prototype.AddChannel = function(track, category, volume) {
 	audio.preload = 'auto';
 
 	// Seems to make FF actually load the audio data, but IE however fucks up
-	if (audio.play && navigator.userAgent.toLowerCase().indexOf('msie') < 0) {
-		audio.play();
-		audio.pause();
-	}
+	//if (audio.play && navigator.userAgent.toLowerCase().indexOf('msie') < 0) {
+	//	audio.play();
+	//	audio.pause();
+	//}
 
 	// Create channel, setting timer to null (not playing)
 	var channel = new Channel(audio, null, category);

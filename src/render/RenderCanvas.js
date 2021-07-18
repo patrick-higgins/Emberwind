@@ -341,7 +341,7 @@ RenderCanvas.prototype.getContext = function() {
 };
 
 /**
- * Based on http://tulrich.com/geekstuff/canvas/jsgl.js
+ * Based on https://tulrich.com/geekstuff/canvas/jsgl.js
  *
  * @param image
  * @param xy
