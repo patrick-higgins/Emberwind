@@ -466,7 +466,8 @@ function loadJSON(file, callback) {
 				var len = request.getResponseHeader("Content-Length");
 				if (len && request.responseText.length !== parseInt(len)) {
 					console.log(len, request.responseText.length);
-					alert("An error occured while downloading Emberwind, please clear your cache and try again.");
+				    alert("An error occured while downloading Emberwind, please clear your cache and try again.");
+				    console.log(request.status, request.responseText);
 				}
 				else {
 					callback(request.responseText);
